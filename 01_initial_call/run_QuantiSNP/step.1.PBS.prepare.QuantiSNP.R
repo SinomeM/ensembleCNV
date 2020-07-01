@@ -108,16 +108,13 @@ for (i in 1:nrow(dat_sample)) {
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ## configure based on your system  
     
-    qsub.cmd <- paste("qsub -l nodes=2,ncpus=10,mem=10gb,walltime=0:10:00 -q short_cpuQ","-o",log.file,"-e", err.file ,"-N", job.name, cmd)
+    qsub.cmd <- paste("qsub -l nodes=1,ncpus=5,mem=10gb,walltime=0:25:00 -q short_cpuQ","-o",log.file,"-e", err.file ,"-N", job.name, cmd)
 
 ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-if ( i > 125 & i <= 150 ) {
   cat("i =", i, qsub.cmd, "\n")
   system(qsub.cmd)
-  }
 
-  Sys.sleep(0.1)
-  
   cat("i = ", i , sample_name, "\n")
+  Sys.sleep(10)
 }
 

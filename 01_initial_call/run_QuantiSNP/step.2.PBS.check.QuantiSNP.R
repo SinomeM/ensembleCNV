@@ -55,7 +55,7 @@ run.quantisnp <- function(path_output, path_dat, sample_name, gender, path_to_qu
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ## configure based on your system  
     
-    qsub.cmd <- paste("qsub -l nodes=2,ncpus=10,mem=10gb,walltime=0:15:00 -q <queque.name>","-o",log.file,"-e", err.file ,"-N", job.name, cmd)
+    qsub.cmd <- paste("qsub -l nodes=1,ncpus=10,mem=15gb,walltime=0:30:00 -q <queque.name>","-o",log.file,"-e", err.file ,"-N", job.name, cmd)
 
 ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   

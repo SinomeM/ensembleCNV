@@ -32,24 +32,6 @@ cp -ru ./02_batch_effect $wkdir
 ## 03_create_CNVR      
 cp -ru ./03_create_CNVR $wkdir
 
-## 04_CNV_genotype
-cp -ru ./04_CNV_genotype $wkdir
-mkdir -p ${wkdir}/04_CNV_genotype/data
-mkdir -p ${wkdir}/04_CNV_genotype/results
-
-## 05_boundary_refinement 
-cp -ru ./05_boundary_refinement $wkdir
-mkdir -p ${wkdir}/05_boundary_refinement/data
-mkdir -p ${wkdir}/05_boundary_refinement/results
-
-## 05a_regenotype_after_refinement
-mkdir -p ${wkdir}/05a_regenotype_after_refinement
-mkdir -p ${wkdir}/05a_regenotype_after_refinement/data
-mkdir -p ${wkdir}/05a_regenotype_after_refinement/results
-
-## 06_performance_assessment
-cp -ru ./06_performance_assessment $wkdir
-
 echo "New project directory has been created at: $wkdir"
 echo "Please put (or create symbolic link to) input data in the directory: $wkdir/data"
 

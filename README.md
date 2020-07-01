@@ -47,7 +47,7 @@ Note:
 
 - Please be advised that ensembleCNV is designed to detect and genotype CNVs on a relatively large cohort usually consisting of at least a few hundred samples. In particular, the steps [creating CNVR](#3-create-cnvr), [CNV genotyping](#4-cnv-genotyping-for-each-cnvr), and [boundary refinement](#5-boundary-refinement) require relatively large sample size to achieve a reasonable reproducibility and accuracy. Results generated from only a few samples are not valid.  
 
-- Each of the 3 third-source CNV callers has its own installation requirements. Please refer to their specific installation instructions: [iPattern](https://github.com/HaoKeLab/ensembleCNV/tree/master/01_initial_call/run_iPattern), [PennCNV](https://github.com/HaoKeLab/ensembleCNV/tree/master/01_initial_call/run_PennCNV) and [QuantiSNP](https://github.com/HaoKeLab/ensembleCNV/tree/master/01_initial_call/run_QuantiSNP).
+- Each of the 3 third-source CNV callers has its own installation requirements. Please refer to their specific installation instructions: [iPattern](https://github.com/SinomeM/ensembleCNV/tree/minimal_version/01_initial_call/run_iPattern), [PennCNV](https://github.com/SinomeM/ensembleCNV/tree/minimal_version/01_initial_call/run_PennCNV) and [QuantiSNP](https://github.com/SinomeM/ensembleCNV/tree/minimal_version/01_initial_call/run_QuantiSNP).
 
 ### Installation
 

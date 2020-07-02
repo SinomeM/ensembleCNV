@@ -52,7 +52,7 @@ while(flag == 0) {
   n_rawcnv <- as.integer(system(paste("cat", cnv1_in, "|", "wc -l"), intern = TRUE))
   cnv1_out <- paste(name_project, idx, "rawcnv", sep = ".")
   
-  cmd1 <- paste(file.path(path_penncnv, "bin/clean_cnv.pl"),
+  cmd1 <- paste(file.path(path_penncnv, "clean_cnv.pl"),
                 "combineseg", cnv1_in, "--signalfile", file_pfb, 
                 "--fraction 0.2", "--bp >", cnv1_out)
   
@@ -80,7 +80,7 @@ while(flag == 0) {
 cnv_penncnv <- paste(name_project, idx, "rawcnv", sep = ".")
 cnv_tab <- paste(name_project, "txt", sep = ".")
 cat("Convert final PennCNV results to tab-delimit text file.\n")
-cmd.transform <- paste(file.path(path_penncnv, "bin/convert_cnv.pl"),
+cmd.transform <- paste(file.path(path_penncnv, "convert_cnv.pl"),
                        "--intype", "penncnv", "--outtype", "tab", cnv_penncnv, ">", cnv_tab)
 system(cmd.transform)
 
@@ -88,7 +88,7 @@ system(cmd.transform)
 cat("Extract individual level statistics for QC.\n")
 cnv_log <- paste(name_project, "log", sep = ".")
 cnv_qc <- paste0(name_project, "_qc.txt")
-cmd.extract <- paste(file.path(path_penncnv, "bin/filter_cnv.pl"), cnv_penncnv,
+cmd.extract <- paste(file.path(path_penncnv, "filter_cnv.pl"), cnv_penncnv,
                      "-qclogfile", cnv_log, "-qcsumout", cnv_qc, ">", "step5.log")
 system(cmd.extract)
 
